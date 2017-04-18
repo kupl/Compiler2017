@@ -3,6 +3,7 @@
   int x;
   int y;
   int n;
+  int z;
   int i;
   int[10] fib;
   x = 0;
