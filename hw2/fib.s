@@ -2,6 +2,7 @@
 {
   int x;
   int y;
+  int z;
   int n;
   int i;
   x = 0;
