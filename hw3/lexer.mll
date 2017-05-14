@@ -8,11 +8,11 @@
                    [
                     ("int", INT);
                     ("if", IF);
-                    ("else",ELSE);
                     ("while", WHILE);
-                    ("do"   , DO);
                     ("print", PRINT);
-                    ("read", READ)
+                    ("read", READ);
+                    ("true", TRUE);
+                    ("false", FALSE);
                   ] 
 } 
 
@@ -31,23 +31,15 @@ rule start =
      | "+"   { PLUS }
      | "-"   { MINUS }
      | "*"   { STAR }
-     | "/"   { SLASH }
      | "!"   { NOT }
      | "=="  { EQUALEQUAL }
      | "="   { EQUAL }
      | "<="  { LE }
-     | ">="  { GE }
-     | "<"   { LT }
-     | ">"   { GT }
-     | "]"   { RBLOCK }
-     | "["   { LBLOCK }
      | ";"   { SEMICOLON }
      | "("   { LPAREN }
      | ")"   { RPAREN }
      | "{"   { LBRACE }
      | "}"   { RBRACE } 
-     | "&&"  { AND }
-     | "||"  { OR }
      | eof   { EOF}
      | _ { raise LexicalError }
 
