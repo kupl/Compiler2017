@@ -66,5 +66,8 @@ let state_empty = PMap.empty
 let state_lookup x s = PMap.find x s
 let state_bind x v s = PMap.add x v s
 
+let eval_stmt : stmt -> state -> state
+=fun c s -> s (* TODO *)
+
 let run : stmt -> unit 
-=fun pgm -> () (* TODO *)
+=fun pgm -> ignore (eval_stmt pgm state_empty)
