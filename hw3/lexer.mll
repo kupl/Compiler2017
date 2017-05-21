@@ -36,6 +36,7 @@ rule start =
      | "=="  { EQUALEQUAL }
      | "="   { EQUAL }
      | "<="  { LE }
+     | "&&"  { AND }
      | ";"   { SEMICOLON }
      | "("   { LPAREN }
      | ")"   { RPAREN }
