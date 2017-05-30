@@ -8,6 +8,7 @@
                    [
                     ("int", INT);
                     ("if", IF);
+                    ("else", ELSE);
                     ("while", WHILE);
                     ("print", PRINT);
                     ("read", READ);
@@ -35,6 +36,7 @@ rule start =
      | "=="  { EQUALEQUAL }
      | "="   { EQUAL }
      | "<="  { LE }
+     | "&&"  { AND }
      | ";"   { SEMICOLON }
      | "("   { LPAREN }
      | ")"   { RPAREN }
