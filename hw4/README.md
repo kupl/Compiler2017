@@ -40,17 +40,20 @@ The results from the S and T interpreters must be equivalent.)
     1
     == translated target program ==
     0 : x = 0
-    0 : t1 = 0
-    0 : x = t1
-    0 : t3 = x
-    0 : t4 = 1
-    0 : t2 = t3 + t4
-    0 : write t2
+    0 : t4 = 0
+    0 : x = t4
+    0 : t1 = x
+    0 : t2 = 1
+    0 : t3 = t1 + t2
+    0 : write t3
     0 : HALT
     == execute the translated program ==
     1
+    The number of instructions executed : 7
     == optimized target program (this is just an example) ==
-    0 : write 1
+    0 : t3 = 1
+    0 : write t3
     0 : HALT
     == execute the optimized target program ==
     1
+    The number of instructions executed : 2
